@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width">
+    <title>stoNe Game</title>
+    <link rel = "styleSheet" href = "style.css" async>
+</head>
+<body onload = startGame()>
+ <h1 id = title>stoNe-gaMe</h1>  
+ <div id = "gameContainer">
+    <img id = "gameScreen" src = "Images/game_Background.png" alt = "Forest with some dirt paths." >
+        <ul id = "pileLayout">
+            <div class = "pile">
+                <img class = "pileState" id = "1" src ="Images/three_Stone.png" alt = "A pile of stones.">
+                <ul id = "buttonList1">
+                    <button onclick = remove(0,1),playerPlay()  class ="button"    id = "pbutton1">1</button>
+                    <button onclick = remove(0,2),playerPlay()  class ="button"    id = "pbutton2">2</button>
+                    <button onclick = remove(0,3),playerPlay()  class ="button"    id = "pbutton3">3</button>
+                </ul>
+            </div>
+            <div class = "pile">
+                <img class = "pileState" id = "2" src ="Images/three_Stone.png" alt = "A pile of stones.">
+                <ul id = "buttonList2">
+                    <button onclick = remove(1,1),playerPlay() class ="button"     id = "pbutton4">1</button>
+                    <button onclick = remove(1,2),playerPlay() class ="button"     id = "pbutton5">2</button>
+                    <button onclick = remove(1,3),playerPlay() class ="button"     id = "pbutton6">3</button>
+                </ul>
+            </div>
+            <div class = "pile">
+                <img class = "pileState"  id = "3" src ="Images/three_Stone.png"alt = "A pile of stones.">
+                <ul id = "buttonList3">
+                    <button onclick = remove(2,1),playerPlay() class ="button"    id = "pbutton7">1</button>
+                    <button onclick = remove(2,2),playerPlay() class ="button"    id = "pbutton8">2</button>
+                    <button onclick = remove(2,3),playerPlay() class ="button"    id = "pbutton9">3</button>
+                </ul>
+            </div>
+        </ul>  
+ </div>
+ <aside>
+    <button onclick = reset() id = "reset">RESET</button>
+   
+</aside>
+<aside id = "HTP">
+    <ul> 
+        <strong>How To Play:</strong> 
+        <li> 
+            When it's your turn you will 
+            <br>
+            have the opportunity to 
+            <br>
+            take as many stones as you like
+            <br>
+            from one pile.
+            <br>
+        </li>
+        <li> 
+            Your goal is to avoid 
+            <br> 
+            being the one to take the last stone 
+            <br>
+            from the last pile.
+            <br>
+            You can remove stones from a pile by 
+            <br>
+            clicking the buttons beneath the piles 
+            <br>
+            choosing the button with 
+            <br>
+            the number of stones you want to take.
+        </li>
+    </ul>
+</aside>
+ <div id = "goblinTextBox">
+    <img id = "characterProfileImage" src = "Images/Goblin.PNG" >
+    <p id = "goblinMessage">
+        Hello this unK Speaking. Its time for you to face a stoney defeat by the hands of my brother glooB.
+    </p>    
+ </div>
+</body>
+<script src = "gameloop.js" async></script>
+
+</html>
